@@ -1,3 +1,4 @@
+import java.io.File;
 import java.io.Serializable;
 
 public class GameProgress implements Serializable {
@@ -7,13 +8,13 @@ public class GameProgress implements Serializable {
     private int weapons;
     private int lvl;
     private double distance;
-    public String path;
-    public GameProgress(int health, int weapons, int lvl, double distance, String path){
+    File file;
+    public GameProgress(int health, int weapons, int lvl, double distance, File file){
         this.health = health;
         this.weapons = weapons;
         this.lvl = lvl;
         this.distance = distance;
-        this.path  = path;
+        this.file  = file;
     }
 
     @Override
